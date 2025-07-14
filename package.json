@@ -7,7 +7,7 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "start": "nodemon src/index.ts",
-    "seed":"npx prisma generate && ts-node prisma/seeders.ts",
+    "seed":"ts-node prisma/seeders.ts",
     "postinstall": "prisma generate && prisma migrate deploy",
     "add-build": "git add dist"
   },
