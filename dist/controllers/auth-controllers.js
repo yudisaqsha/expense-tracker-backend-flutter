@@ -5,12 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.register = register;
 exports.login = login;
-const prisma_1 = require("../generated/prisma");
+const client_1 = require("@prisma/client");
 const validate_email_1 = __importDefault(require("../functions/validate-email"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const SECRET_KEY = process.env.SECRET_KEY;
-const prisma = new prisma_1.PrismaClient();
+const prisma = new client_1.PrismaClient();
 const SALT_ROUNDS = 10;
 async function register(req, res) {
     const { username, name, email, password } = req.body;

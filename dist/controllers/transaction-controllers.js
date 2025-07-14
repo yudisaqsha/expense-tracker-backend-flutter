@@ -6,8 +6,8 @@ exports.addData = addData;
 exports.updateData = updateData;
 exports.deleteData = deleteData;
 exports.getTotalTransaction = getTotalTransaction;
-const prisma_1 = require("../generated/prisma");
-const prisma = new prisma_1.PrismaClient();
+const client_1 = require("@prisma/client");
+const prisma = new client_1.PrismaClient();
 async function getTransaction(req, res) {
     const userId = req.user.id;
     try {
